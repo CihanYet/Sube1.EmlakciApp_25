@@ -7,4 +7,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Sube1.EmlakciLib\Sube1.EmlakciLib.csproj" />
+  </ItemGroup>
+
 </Project>
