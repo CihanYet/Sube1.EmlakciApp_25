@@ -14,25 +14,26 @@ namespace Sube1.EmlakciApp
             //string bilgi = evim.EvBilgileri();
             //Console.WriteLine(bilgi);
 
-            //Ev evim2 = new Ev();
-            //evim2.odasayisi = 2;
-            //evim2.katno = 5;
-            //evim2.semt = "Gazi";
-            //evim2.alan = 120; 
-            //Console.WriteLine(evim2.EvBilgileri());
+            SatilikEv se = new SatilikEv(600,3)
+           
+
+         
 
             //var evim3 = new Ev(2, 3, 120);
             //Console.WriteLine(evim3.EvBilgileri());
 
             //Console.WriteLine($"Bellekteki ev sayısı:{Ev.sayac}");
 
+
+
             try
             {
                 var evim = new Ev();
-                evim.Alan = 40;
+                evim.Alan = 60;
                 evim.Odasayisi = 3;
                 evim.Semt = "Gazi";
                 evim.Katno = 2;
+                Console.WriteLine(Ev.Sayac);
                 //evim.Buyukluk = "Küçük Ev";
                 Console.WriteLine(evim.Buyukluk);
             }
@@ -41,7 +42,7 @@ namespace Sube1.EmlakciApp
                 Console.WriteLine(ex.Message);
             }
 
-           
+
         }
     }
 }

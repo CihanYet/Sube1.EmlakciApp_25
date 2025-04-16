@@ -4,11 +4,11 @@ namespace Sube1.EmlakciLib
 {
     public class Ev
     {
-        public static int sayac = 0;
+        public static int Sayac { get; private set; }
 
         public Ev()
         {
-            sayac++;
+            Sayac++;
         }
         public Ev(int odasayisi, int katno, double alan, string semt = "Kızılay")
         {
@@ -16,7 +16,7 @@ namespace Sube1.EmlakciLib
             this.Katno = katno;
             this.Semt = semt;
             this.Alan = alan;
-            sayac++;
+            Sayac++;
         }
 
         public Ev(int odasayisi, int katno, double alan)
@@ -25,10 +25,10 @@ namespace Sube1.EmlakciLib
             this.Katno = katno;
             this.Semt = "Kızılay";
             this.Alan = alan;
-            sayac++;
+            Sayac++;
         }
 
-        private int odasayisi;//field       
+
         private string semt;
         public string Buyukluk { get; private set; }
 
@@ -42,11 +42,13 @@ namespace Sube1.EmlakciLib
 
         //Lambda ile tek satırlı property örnekleri      
         public string Semt { get => semt; set => semt = value.ToUpper(); }//Property
+
+        private int odasayisi;//field      
         public int Odasayisi { get => odasayisi; set => odasayisi = Math.Abs(value); }
 
         //Metodlarla yapılan Getter ve Setter'lar
-        public void SetOdaSayisi(int odasayisi) => this.Odasayisi = Math.Abs(odasayisi);
-        public int GetOdaSayisi() => this.Odasayisi;
+        //public void SetOdaSayisi(int odasayisi) => this.odasayisi = Math.Abs(odasayisi);
+        //public int GetOdaSayisi() => this.odasayisi;
 
         //Full Property: Get ve Set bloklarında çok satırlı işlemler yapmak için kullanılır.
         //private int myVar;
@@ -55,24 +57,27 @@ namespace Sube1.EmlakciLib
         //{
         //    get
         //    { 
-        //        //Burada başka işlemler yapılabilir.
-        //        return myVar;                
+        //        //
+        //        return myVar;
+
         //    }
         //    set
         //    { 
+        //        //
         //        myVar = value;
-        //        //Burada başka işlemler yapılabilir.
+        //        //
         //    }
-        //}       
+        //} 
 
         private double alan;//field
 
         public double Alan//full property
         {
+
             get { return alan; }
             set
             {
-                if (value<50)
+                if (value < 50)
                 {
                     throw new Exception("Min alan değeri 50 olmalıdır");
                 }
@@ -92,12 +97,10 @@ namespace Sube1.EmlakciLib
             }
         }
 
-
         public string EvBilgileri()
         {
             return $"Oda Sayısı:{this.Odasayisi}\nKat no:{this.Katno}\nAlan:{this.Alan}\nSemt:{this.Semt}\nBüyüklük:{this.Buyukluk}";
         }
-
     }
 }
 
