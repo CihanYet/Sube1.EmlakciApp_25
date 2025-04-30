@@ -11,14 +11,10 @@ namespace Sube1.EmlakciLib
 
         }
 
-        public KiralikEv(double kira, double depozito, int odasayisi, string semt, int katno, double alan)
+        public KiralikEv(double kira, double depozito, int odasayisi, string semt, int katno, double alan):base(odasayisi,katno,alan,semt)
         {
             this.Kira = kira;
-            this.Depozito = depozito;
-            base.Odasayisi = odasayisi;
-            base.Katno = katno;
-            base.Alan = alan;
-            base.Semt = semt;
+            this.Depozito = depozito;           
         }
 
         public double Kira { get; set; }

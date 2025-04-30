@@ -6,18 +6,13 @@ namespace Sube1.EmlakciApp
     {
         static void Main(string[] args)
         {
-            //var evim = new Ev();
-            //evim.alan = 100;
-            //evim.semt = "Gazi";
-            //evim.katno = 2;
-            //evim.odasayisi = 3;
-            //string bilgi = evim.EvBilgileri();
-            //Console.WriteLine(bilgi);
-
-            SatilikEv se = new SatilikEv(600,3)
-           
-
          
+
+            SatilikEv se = new SatilikEv(500, 3, "Gazi", 2, 100);
+            Console.WriteLine(se.SatilikEvBilgileri());
+
+
+
 
             //var evim3 = new Ev(2, 3, 120);
             //Console.WriteLine(evim3.EvBilgileri());
@@ -26,21 +21,21 @@ namespace Sube1.EmlakciApp
 
 
 
-            try
-            {
-                var evim = new Ev();
-                evim.Alan = 60;
-                evim.Odasayisi = 3;
-                evim.Semt = "Gazi";
-                evim.Katno = 2;
-                Console.WriteLine(Ev.Sayac);
-                //evim.Buyukluk = "Küçük Ev";
-                Console.WriteLine(evim.Buyukluk);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
+            //try
+            //{
+            //    var evim = new Ev();
+            //    evim.Alan = 60;
+            //    evim.Odasayisi = 3;
+            //    evim.Semt = "Gazi";
+            //    evim.Katno = 2;
+            //    Console.WriteLine(Ev.Sayac);
+            //    //evim.Buyukluk = "Küçük Ev";
+            //    Console.WriteLine(evim.Buyukluk);
+            //}
+            //catch (Exception ex)
+            //{
+            //    Console.WriteLine(ex.Message);
+            //}
 
 
         }

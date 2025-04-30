@@ -18,5 +18,10 @@ namespace Sube1.EmlakciLib
 
         public double Satisfiyat { get; set; }
 
+        public string SatilikEvBilgileri()
+        {
+            return $"{base.EvBilgileri()}\nSatış Fiyat:{this.Satisfiyat}";
+        }
+
     }
 }
