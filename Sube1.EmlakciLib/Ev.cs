@@ -97,12 +97,14 @@ namespace Sube1.EmlakciLib
             }
         }
 
-        public string EvBilgileri()
+        public virtual string EvBilgileri()
         {
             return $"Oda Sayısı:{this.Odasayisi}\nKat no:{this.Katno}\nAlan:{this.Alan}\nSemt:{this.Semt}\nBüyüklük:{this.Buyukluk}";
         }
     }
 }
+//virtual: Override edilmesi gereken üyeler, virtual anahtar kelimesi ile tanımlanır.
+//Polymorphisim(Çok biçimlilik): base classta virtual olarak tanımlanan üyeler, türeyen classlarda override edilerek farklı biçimlerde kullanılabilir.
 
 //Constructor-Yapıcı Metod-Kurucu Metod
 //Görevi: Bir classtan nesne türetilirken çalışır ve class içindeki fieldlara varsayılan değer atamalarını yapar.
